@@ -23,7 +23,10 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<MenuPage theme={theme} toggleTheme={toggleTheme} />} />
+      <Route 
+        path="/" 
+        element={user ? <MenuPage theme={theme} toggleTheme={toggleTheme} /> : <Navigate to="/login" />} 
+      />
       <Route path="/login" element={user ? <Navigate to="/" /> : <Login theme={theme} toggleTheme={toggleTheme} />} />
       <Route 
         path="/admin" 

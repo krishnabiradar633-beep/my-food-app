@@ -69,9 +69,9 @@ function MenuPage({ theme, toggleTheme }) {
         
         <main className="main-content">
           <section className="hero">
-            <h1 className="animate-slide-up">Craving Something Delicious?</h1>
+            <h1 className="animate-slide-up">NO WAIT. JUST FOOD.</h1>
             <p className="animate-slide-up" style={{ animationDelay: '0.1s' }}>
-              Order ahead and skip the line. Fast, fresh, and exactly how you like it.
+              Select your fuel. Pick it up. Don't waste time in lines.
             </p>
           </section>
 
