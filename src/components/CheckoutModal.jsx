@@ -65,7 +65,7 @@ const CheckoutModal = ({ onClose, onConfirm }) => {
         </div>
 
         <div className="checkout-footer">
-          <button className="btn-primary btn-full" onClick={onConfirm}>
+          <button className="btn-primary btn-full" onClick={() => onConfirm(cart, total, 'Paid')}>
             Place Order • ${total}
           </button>
         </div>
