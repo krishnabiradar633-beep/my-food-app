@@ -1,51 +1,51 @@
 :root {
-  --font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+  --font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   
-  /* Stunning Light Theme Variables */
+  /* Soft Slate Light Theme */
   --bg-color: #F8FAFC; 
-  --text-primary: #0F172A;
+  --text-primary: #1E293B;
   --text-secondary: #64748B;
   
-  /* Vibrant gradient accents look amazing on both light and dark */
-  --accent-color: #FF416C; 
-  --accent-hover: #FF4B2B;
-  --accent-gradient: linear-gradient(135deg, #FF416C 0%, #FF4B2B 100%);
-  --accent-glow: 0 8px 25px rgba(255, 65, 108, 0.35);
+  /* Sunset Gradient Accent */
+  --accent-color: #f97316; 
+  --accent-hover: #ef4444;
+  --accent-gradient: linear-gradient(135deg, #f97316 0%, #ef4444 100%);
+  --accent-glow: 0 10px 30px rgba(249, 115, 22, 0.4);
   
-  /* Premium light glassmorphism */
-  --card-bg: rgba(255, 255, 255, 0.85);
-  --card-gradient: linear-gradient(180deg, rgba(255,255,255,0.6) 0%, rgba(248,250,252,0.9) 100%);
-  --header-bg: rgba(255, 255, 255, 0.85);
-  --card-border: rgba(0, 0, 0, 0.06);
+  /* Light Glassmorphism */
+  --card-bg: rgba(255, 255, 255, 0.7);
+  --card-gradient: linear-gradient(180deg, rgba(255,255,255,0.7) 0%, rgba(248,250,252,0.9) 100%);
+  --header-bg: rgba(255, 255, 255, 0.7);
+  --card-border: rgba(0, 0, 0, 0.04);
   --border-color: rgba(0, 0, 0, 0.08);
   
   --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 10px 20px -5px rgba(0, 0, 0, 0.08);
-  --shadow-lg: 0 25px 40px -10px rgba(0, 0, 0, 0.12);
+  --shadow-md: 0 12px 24px -5px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 30px 60px -10px rgba(0, 0, 0, 0.12);
   
-  --radius-md: 16px;
-  --radius-lg: 24px;
-  --glass-blur: blur(20px);
+  --radius-md: 20px;
+  --radius-lg: 28px;
+  --glass-blur: blur(24px);
 }
 
 [data-theme='dark'] {
-  /* Ultra Dark, Rich Background */
-  --bg-color: #080A10; 
-  --text-primary: #ffffff;
+  /* Midnight Blue Dark Theme */
+  --bg-color: #0B0F19; 
+  --text-primary: #F8FAFC;
   --text-secondary: #94A3B8;
   
-  --accent-glow: 0 8px 25px rgba(255, 65, 108, 0.4);
+  --accent-glow: 0 10px 30px rgba(244, 63, 94, 0.4);
   
-  /* Premium dark glassmorphism */
-  --card-bg: rgba(20, 24, 36, 0.75);
-  --card-gradient: linear-gradient(180deg, rgba(30,36,50,0.6) 0%, rgba(20,24,36,0.9) 100%);
-  --header-bg: rgba(8, 10, 16, 0.85);
-  --card-border: rgba(255, 255, 255, 0.08);
-  --border-color: rgba(255, 255, 255, 0.12);
+  /* Dark Glassmorphism */
+  --card-bg: rgba(15, 23, 42, 0.6);
+  --card-gradient: linear-gradient(180deg, rgba(30,41,59,0.5) 0%, rgba(15,23,42,0.8) 100%);
+  --header-bg: rgba(11, 15, 25, 0.75);
+  --card-border: rgba(255, 255, 255, 0.06);
+  --border-color: rgba(255, 255, 255, 0.1);
   
   --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 10px 20px -5px rgba(0, 0, 0, 0.5);
-  --shadow-lg: 0 25px 40px -10px rgba(0, 0, 0, 0.7);
+  --shadow-md: 0 12px 24px -5px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 30px 60px -10px rgba(0, 0, 0, 0.8);
 }
 
 * {
@@ -58,14 +58,14 @@ body {
   font-family: var(--font-family);
   background-color: var(--bg-color);
   color: var(--text-primary);
-  transition: background-color 0.3s ease, color 0.3s ease;
-  line-height: 1.5;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.03em;
 }
 
 button {
@@ -76,7 +76,7 @@ button {
   outline: none;
 }
 
-input {
+input, select, textarea {
   font-family: inherit;
   outline: none;
 }
@@ -92,29 +92,32 @@ input {
 .btn-primary {
   background: var(--accent-gradient);
   color: white;
-  padding: 0.75rem 1.75rem;
+  padding: 0.85rem 2rem;
   border-radius: 9999px;
   font-weight: 700;
   letter-spacing: 0.5px;
-  text-transform: uppercase;
-  font-size: 0.9rem;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 0.95rem;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); /* Bouncy spring effect */
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
   border: none;
-  box-shadow: 0 4px 15px rgba(255, 65, 108, 0.2);
+  box-shadow: 0 4px 15px rgba(249, 115, 22, 0.2);
 }
 
 .btn-primary:hover {
-  transform: translateY(-3px) scale(1.02);
+  transform: translateY(-4px) scale(1.03);
   box-shadow: var(--accent-glow);
 }
 
+.btn-primary:active {
+  transform: translateY(0) scale(0.97);
+}
+
 .btn-icon {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -122,19 +125,46 @@ input {
   background-color: var(--card-bg);
   border: 1px solid var(--border-color);
   color: var(--text-primary);
-  transition: all 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .btn-icon:hover {
-  transform: scale(1.05);
+  transform: translateY(-2px) scale(1.1);
   background-color: var(--border-color);
+  color: var(--accent-color);
+}
+
+/* Base card style */
+.food-card {
+  background: var(--card-gradient);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.add-to-cart-btn {
+  background: var(--accent-gradient);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border: none;
+  box-shadow: 0 4px 15px rgba(249, 115, 22, 0.2);
+}
+.add-to-cart-btn:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: var(--accent-glow);
 }
 
 /* Animations */
 @keyframes slideInUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
@@ -143,20 +173,14 @@ input {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
 }
 
 .animate-slide-up {
-  animation: slideInUp 0.5s ease forwards;
+  animation: slideInUp 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
 
 .animate-fade-in {
-  animation: fadeIn 0.3s ease forwards;
+  animation: fadeIn 0.4s ease forwards;
 }
